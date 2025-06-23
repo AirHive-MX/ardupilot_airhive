@@ -138,6 +138,10 @@ class VehicleInfo(object):
                                             "default_params/gazebo-iris.parm"],
                 "external": True,
             },
+            "airhive_7in": {
+                "waf_target": "bin/arducopter",
+                "default_params_filename": ["default_params/copter.parm", "default_params/airhive_7in.parm"],
+            },
             "airsim-copter": {
                 "waf_target": "bin/arducopter",
                 "default_params_filename": ["default_params/copter.parm",
