@@ -1,16 +1,22 @@
-# Airhive 7in Drone is X frame
+# AirHive params for no GPS drone
 FRAME_CLASS	1
 FRAME_TYPE	1
-# IRLOCK FEATURE
-RC8_OPTION 39
-PLND_ENABLED    1
-PLND_TYPE       3
-# SONAR FOR IRLOCK
-SIM_SONAR_SCALE 10
-RNGFND1_TYPE 1
-RNGFND1_SCALING 10
-RNGFND1_PIN 0
-RNGFND1_MAX_CM 5000
+
+#No GPS - Deshabilitar los módulos GPS
+param set GPS_TYPE       0    # Desactiva el GPS principal 
+param set GPS_TYPE2      0    # Desactiva el segundo GPS (si existiera)
+param set GPS_AUTO_CONFIG 0    # Deshabilita el auto‑config del GPS 
+param set AHRS_GPS_USE   0    # No usar GPS para DCM/AHRS 
+param set ARMING_CHECK 65     # Desactiva solo la verificación de GPS lock (poner 0 si quieremos desactivar todos)
+
+
+# Lidar Rangefinder
+param set RNGFND1_TYPE         10        # Mavlink
+param set RNGFND1_MIN_DISTANCE 1        # en cm (tu mínimo = 1 cm)
+param set RNGFND1_MAX_DISTANCE 800      # en cm (tu máximo = 800 cm)
+param set RNGFND1_ORIENT       25        #Hacia abajo
+param set RNGFND1_ADDR         0        # coincide con self.lidar_sensor_id
+param set RNGFND1_GNDCLEAR     0   
 
 #PID PARAMS
 ATC_ACCEL_R_MAX 325620
