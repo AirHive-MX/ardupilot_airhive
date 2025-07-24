@@ -142,6 +142,14 @@ class VehicleInfo(object):
                 "waf_target": "bin/arducopter",
                 "default_params_filename": ["default_params/copter.parm", "default_params/airhive_7in.parm"],
             },
+            "airhive_7in_gps": {
+                "waf_target": "bin/arducopter",
+                "default_params_filename": ["default_params/copter.parm", "default_params/airhive_7in_gps.parm"],
+            },
+            "airhive_7in_no_gps": {
+                "waf_target": "bin/arducopter",
+                "default_params_filename": ["default_params/copter.parm", "default_params/airhive_7in_no_gps.parm"],
+            },
             "airsim-copter": {
                 "waf_target": "bin/arducopter",
                 "default_params_filename": ["default_params/copter.parm",
